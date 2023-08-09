@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>初识vue</title>
+    <!-- 引入Vue -->
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+    <!-- 准备一个容器 -->
+    <div id="root">
+        <h1>hello,{{name.toUpperCase()}}{{adress}}</h1>
+        <h1><a :href="url">点我去百度</a></h1>
+
+    </div>
+    <script type="text/javascript">
+        Vue.config.productionTip=false 
+        //创建Vue实例
+        new Vue({
+            el:'#root', //el用于指定当前Vue为那个容器服务，值通常为css选择器字符串
+            data:{//用于存储数据，供el所指定容器使用，值先写成对象
+                name:'尚硅谷323aaa',
+                adress:'尚硅谷323',
+                url:'https:\\www.baidu.com'
+            }
+        })
+    
+        function demo(e){
+            return e+1; 
+        }
+    </script>
+</body>
+</html>
