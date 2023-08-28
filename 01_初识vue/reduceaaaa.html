@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div >aaa</div>
+    <script >
+        debugger 
+        const div=document.getElementsByTagName('div')[0];
+        div.onclick=a;
+        function a(){
+            const array1=  [1,2,3,4]
+        const initialValue=0;
+        const sumWithInitial=array1.reduce((accumulator,currentValue)=>accumulator+currentValue,initialValue);
+        console.log(sumWithInitial);
+        console.log(['aaaaa'].concat('bbbbbbbbbb'));
+
+        }
+        
+//第一种----------------------------------------
+function parent(str,callback) {
+  console.log(str);
+  callback();
+}
+function son() {
+  console.log("执行了回调函数！");
+}
+//先定义一个回调函数son，再把回调函数名son传进去
+parent("先执行我",son);
+
+
+    </script>
+</body>
+</html>

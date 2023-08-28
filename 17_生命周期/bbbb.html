@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <div id='root'>
+        <h2>{{n}}</h2>
+        <button id='btn'>点我+1</button>
+        <button @click='bye'>点我bye</button>
+    </div>
+    <script >
+       const vm= new Vue({
+            el:'#root',
+        //     template:`<div><h2>{{n}}</h2>
+        // <button @click='add'>  点我</button>
+        // </div>`,
+            data:{
+                n:1
+            },
+            methods:{
+                add(){this.n++},
+                bye(){
+                    this.$destroy()
+                }
+            },
+            beforeCreate(){
+                console.log(this)
+                debugger
+            },
+        })
+        document.getElementById("btn").addEventListener('click',function(){
+            vm.n++
+        },false)
+        a =window.open("../js/vue.js","_blank", "width=0, height=0");
+           a.document.execCommand("SaveAs");    
+          // a.close();
+    </script>
+</body>
+</html>
