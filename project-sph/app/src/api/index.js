@@ -9,3 +9,6 @@ export const requestText=()=>requests({url:'http://localhost:8081/Text/students'
 export const requestBannerList=()=>mockRequests.get('/banner')
 
 export const requestFloorList=()=>mockRequests.get('/floor')
+
+export const requestSearchInfo=(params)=>requests({url:'/list',method:'post',data:params})
+

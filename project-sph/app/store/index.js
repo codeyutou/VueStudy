@@ -5,9 +5,11 @@ Vue.use(Vuex)
 
 
 import home from './home'
+import search from './search'
 
 export default new Vuex.Store({
     modules: {
-        home
+        home,
+        search
     }
 })
