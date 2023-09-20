@@ -23,10 +23,13 @@ let params={
   // "trademark": "4:小米"
 }
 
-requestSearchInfo(params);
+//requestSearchInfo(params);
 new Vue({
   render: h => h(App),
   store,
+  beforeCreate(){
+		Vue.prototype.$bus=this
+	},
   //注册路由
   router
 }).$mount('#app')

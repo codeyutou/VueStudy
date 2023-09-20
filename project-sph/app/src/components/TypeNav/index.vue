@@ -96,6 +96,7 @@ export default {
    
     },
     goSearch(event) {
+
       let element = event.target;
       let { categoryname, category1id, category2id, category3id } =
         element.dataset;

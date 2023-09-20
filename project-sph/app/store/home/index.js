@@ -36,7 +36,7 @@ const actions={
 
      async getBannerList(context){
         let result =await requestBannerList();
-        console.log(result)
+       // console.log(result)
         if(result.code==200){
             context.commit('BANNERLIST',result.data)
         }
@@ -45,7 +45,7 @@ const actions={
     async getFloorList(context){
 
         let result =await requestFloorList();
-        console.log(result)
+        //console.log(result)
         if(result.code==200){
             context.commit('FLOORLIST',result.data)
         }
