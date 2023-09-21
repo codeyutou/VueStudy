@@ -1,4 +1,26 @@
 @font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url('/iconfont.ttf?t=1695261924350') format('truetype');
+  
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-jiang:before {
+  content: "\e506";
+}
+
+.icon-top-arrow:before {
+  content: "\e504";
+}
+
+@font-face {
     font-family: icon-pc;
     
     src: url(../fonts//icon-pc.eot?59lb71);
@@ -1061,3 +1083,4 @@
   .icon-tb-mobiletao:before {
     content: "\e6e9";
   }
+  

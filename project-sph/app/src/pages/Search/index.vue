@@ -78,11 +78,11 @@
           <div class="sui-navbar">
             <div class="navbar-inner filter">
               <ul class="sui-nav">
-                <li class="active">
-                  <a href="#">综合</a>
+                <li :class="{active:searchParams.order.indexOf(1)!=-1 }">
+                  <a href="#" >综合<span class="iconfont" :class="{'icon-jiang':searchParams.order.indexOf('desc')!=-1,'icon-top-arrow':searchParams.order.indexOf('asc')!=-1}" ></span></a>
                 </li>
-                <li>
-                  <a href="#">销量</a>
+                <li :class="{active:searchParams.order.indexOf(2)!=-1 }">
+                  <a href="#" >销量<span class="iconfont" :class="{'icon-jiang':searchParams.order.indexOf('desc')!=-1,'icon-top-arrow':searchParams.order.indexOf('asc')!=-1}" ></span></a>
                 </li>
                 <li>
                   <a href="#">新品</a>
@@ -276,10 +276,10 @@ export default {
         // "category3Id": "",
         // "categoryName": "",
         //  "keyword": "",
-        // "order": "1:desc",
+        order: "1:asc",
         // "pageNo": 1,
         // "pageSize": 10,
-         "props": [],
+        props: [],
         // "trademark": "4:小米"
       },
     };
@@ -341,18 +341,18 @@ export default {
       this.getSearch(this.searchParams);
     },
     breadAttr(attrs, attrvalues) {
-      let attr=`${attrs.attrId}:${attrvalues}:${attrs.attrName}`
-      if(this.searchParams.props.indexOf(attr)==-1){
-        this.searchParams.props.push(attr)
+      let attr = `${attrs.attrId}:${attrvalues}:${attrs.attrName}`;
+      if (this.searchParams.props.indexOf(attr) == -1) {
+        this.searchParams.props.push(attr);
       }
       this.getSearch(this.searchParams);
-      
+
       console.log(attrs, attrvalues);
     },
-    removeAttr(index){
-       this.searchParams.props.splice(index,1)
-  this.getSearch(this.searchParams);
-    }
+    removeAttr(index) {
+      this.searchParams.props.splice(index, 1);
+      this.getSearch(this.searchParams);
+    },
   },
   watch: {
     $route(newValue, oldValue) {
